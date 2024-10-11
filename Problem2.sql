@@ -24,7 +24,7 @@ CREATE TABLE orders (
 );
 
 -- Order_items Table
-CREATE TABLE order_item (
+CREATE TABLE order_items (
     order_id INT,
     product_id INT,
     quantity INT,
@@ -33,3 +33,11 @@ CREATE TABLE order_item (
     FOREIGN KEY (product_id) REFERENCES products(id)
 
 );
+
+--Insert products table data
+INSERT INTO products (product_name, price, stock_quantity) VALUES
+('Desktop', 899.99, 50),
+('Laptop', 399.99, 10),
+('IPad', 89.99, 100),
+('Smartphone', 599.99, 15),
+('Smartwatch', 299.99, 20);
