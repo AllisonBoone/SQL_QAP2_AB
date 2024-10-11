@@ -34,10 +34,18 @@ CREATE TABLE order_items (
 
 );
 
---Insert products table data
+-- Insert products table data
 INSERT INTO products (product_name, price, stock_quantity) VALUES
 ('Desktop', 899.99, 50),
 ('Laptop', 399.99, 10),
 ('IPad', 89.99, 100),
 ('Smartphone', 599.99, 15),
 ('Smartwatch', 299.99, 20);
+
+-- Insert customers table data
+INSERT INTO customers (first_name, last_name, email) VALUES
+('John', 'Doe', 'JohnDoe@email.com'),
+('Jane', 'Smith', 'JaneSmith@email.com'),
+('Bob', 'Doyle', 'BobDoyle@email.com'),
+('Mark', 'Delaney', 'MarkDelaney@email.com');
+
