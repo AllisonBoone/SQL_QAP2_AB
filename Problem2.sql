@@ -49,3 +49,12 @@ INSERT INTO customers (first_name, last_name, email) VALUES
 ('Bob', 'Doyle', 'BobDoyle@email.com'),
 ('Mark', 'Delaney', 'MarkDelaney@email.com');
 
+-- Insert orders table data
+INSERT INTO orders (customer_id, order_date) VALUES
+(1, 3, '2024-01-01'),
+(2, 2, '2024-02-02'),
+(3, 1, '2024-03-03'),
+(4, 2, '2024-04-04'),
+(3, 3, '2024-04-04');
+
+
