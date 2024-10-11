@@ -62,3 +62,10 @@ INSERT INTO enrollments (student_id, course_id, enrollment_date) VALUES
 (3, 1, '2024-03-03'),
 (4, 2, '2024-04-04'),
 (5, 3, '2024-05-05');
+
+-- Query students full name in Physics 101 
+SELECT CONCAT (students.first_name, ' ', students.last_name) AS full_name FROM students 
+JOIN enrollments ON students.id = enrollments.student_id
+JOIN courses ON enrollments.course_id = course_id
+WHERE courses.course_name = 'Physics 101';
+
