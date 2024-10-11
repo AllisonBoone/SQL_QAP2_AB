@@ -24,4 +24,14 @@ CREATE TABLE courses (
     FOREIGN KEY (professor_id) REFERENCES professors(id)
 );
 
+-- Enrollments Table
+CREATE TABLE enrollments (
+    student_id INT,
+    course_id INT,
+    enrollment_date DATE,
+    PRIMARY KEY (student_id, course_id),
+    FOREIGN KEY (student_id) REFERENCES students(id),
+    FOREIGN KEY (course_id) REFERENCES courses(id)
+)
+
 
