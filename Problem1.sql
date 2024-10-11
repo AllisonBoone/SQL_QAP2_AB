@@ -45,7 +45,12 @@ INSERT INTO students (first_name, last_name, email,school_enrollment_date) VALUE
 -- Insert professors table data
 INSERT INTO professors (first_name, last_name, department) VALUES
 ('Chelsea', 'Davidson', 'Mathematics'),
-('Hayden', 'Gibbs', 'English'),
 ('Valery', 'Cole', 'Chemistry'),
-('Bishop', 'Cochran', 'History'),
-('Felix', 'Montes', 'Physics');
+('Felix', 'Montes', 'Physics'),
+('Bishop', 'Cochran', 'History');
+
+-- Insert courses table data
+INSERT INTO courses (course_name, course_description, professor_id)  VALUES
+('Algebra 101', 'Introduction to to algebra concepts'),
+('General Chemistry', 'Introduction to chemistry compounds'),
+('Physics 101', 'Introduction to physics');
