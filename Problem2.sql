@@ -13,3 +13,12 @@ CREATE TABLE customers (
     last_name VARCHAR(50),
     email VARCHAR(50)
 );
+
+--Orders Table
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    FOREIGN KEY (customer_id) REFERENCES customers(id)
+
+);
