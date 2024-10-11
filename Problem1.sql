@@ -82,3 +82,7 @@ UPDATE students
 SET email = 'NewJohnDoe@email.com'
 WHERE id = 1;
 
+-- Delete student enrollment from one course
+DELETE FROM enrollments
+WHERE student_id = 2 AND course_id = 2;
+
