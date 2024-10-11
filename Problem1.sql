@@ -76,3 +76,9 @@ JOIN professors ON courses.professor_id = professors.id;
 -- Query all courses with students enrolled
 SELECT DISTINCT courses.course_name FROM courses
 JOIN enrollments ON courses.id = enrollments.course_id;
+
+-- Update student info (email)
+UPDATE students 
+SET email = 'NewJohnDoe@email.com'
+WHERE id = 1;
+
