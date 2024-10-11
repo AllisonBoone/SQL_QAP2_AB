@@ -54,3 +54,11 @@ INSERT INTO courses (course_name, course_description, professor_id)  VALUES
 ('Algebra 101', 'Introduction to to algebra concepts'),
 ('General Chemistry', 'Introduction to chemistry compounds'),
 ('Physics 101', 'Introduction to physics');
+
+-- Insert enrollments table data
+INSERT INTO enrollments (student_id, course_id, enrollment_date) VALUES
+(1, 3, '2024-01-01'),
+(2, 2, '2024-02-02'),
+(3, 1, '2024-03-03'),
+(4, 2, '2024-04-04'),
+(5, 3, '2024-05-05');
