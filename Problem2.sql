@@ -51,10 +51,18 @@ INSERT INTO customers (first_name, last_name, email) VALUES
 
 -- Insert orders table data
 INSERT INTO orders (customer_id, order_date) VALUES
-(1, 3, '2024-01-01'),
-(2, 2, '2024-02-02'),
-(3, 1, '2024-03-03'),
-(4, 2, '2024-04-04'),
-(3, 3, '2024-04-04');
+(1, '2024-01-01'),
+(2, '2024-02-02'),
+(3, '2024-03-03'),
+(4, '2024-04-04'),
+(3, '2024-04-04');
+
+-- Insert order_items table data
+INSERT INTO order_items (order_id, product_id, quantity) VALUES
+(1, 1, 5), 
+(2, 2, 4),  
+(3, 3, 3),  
+(4, 4, 2),  
+(3, 5, 3); 
 
 
