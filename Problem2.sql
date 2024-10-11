@@ -63,6 +63,27 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
 (2, 2, 4),  
 (3, 3, 3),  
 (4, 4, 2),  
-(3, 5, 3); 
+(5, 5, 3); 
 
+-- Query names and quantity of all products
+SELECT product_name, stock_quantity 
+FROM products;
 
+-- Query name and quantity of order with id 1
+SELECT products.product_name. order_items.quantity 
+FROM order_items
+JOIN products ON order_items.product_id = products.id
+WHERE order_items.order_id = 1;
+
+-- Query all orders made by a customer with id 1
+SELECT orders.id AS order_id, products.product_name, order_items.quantity
+FROM orders
+JOIN order_items ON orders.id = order_items.order_id
+JOIN products ON order_items.product_id = products.id 
+WHERE orders.customer_id = 1;
+
+-- Query stock quantity of order id 5
+SELECT products.products_name, products.stock_quantity
+FROM products
+JOIN order_items ON products.id = order_items.product.id
+WHERE order_items.order_id = 5;
