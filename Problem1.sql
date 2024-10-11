@@ -15,4 +15,13 @@ CREATE TABLE professors (
     department VARCHAR(50)
 );
 
+-- Courses Table
+CREATE TABLE courses (
+    id SERIAL PRIMARY KEY,
+    course_name VARCHAR(50),
+    course_description TEXT,
+    professor_id INT,
+    FOREIGN KEY (professor_id) REFERENCES professors(id)
+);
+
 
