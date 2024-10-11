@@ -82,8 +82,23 @@ JOIN order_items ON orders.id = order_items.order_id
 JOIN products ON order_items.product_id = products.id 
 WHERE orders.customer_id = 1;
 
--- Query stock quantity of order id 5
+-- Query stock quantity of order id 5 (Smartwatch)
 SELECT products.products_name, products.stock_quantity
 FROM products
 JOIN order_items ON products.id = order_items.product.id
 WHERE order_items.order_id = 5;
+
+-- Update stock quantity (-3 to Smartwatch stock of 20)
+UPDATE products 
+SET stock_quantity = stock_quantity - order_items.quantity
+FROM order_items
+WHERE products.id = order_items.products_id
+AND order_items.order_id = 5;
+
+-- Delete items from order
+DELETE FROM order_items
+WHERE order_id = 3;
+
+-- Delete order with deleted items
+DELETE FROM orders
+WHERE id = 3;
